@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+/* body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url("img/flat-lay-notebook-with-list-desk.jpg")no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white; /* White text for better contrast */
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.03);
+}
+
+h1 {
+  color: #00796b;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input & Button styles */
+#taskInput {
+  padding: 12px 15px;
+  width: 90%;
+  margin-bottom: 20px;
+  border: 1px solid #00796b;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#taskInput:focus {
+  border-color: #004d40;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+li span {
+  flex-grow: 1;
+  font-size: 18px;
+  color: #00796b;
+}
+
+button.edit, button.delete {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+button.edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #388e3c;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #e53935;
+}
+
+button i {
+  margin-right: 5px; /* Space between icon and text */
+}
